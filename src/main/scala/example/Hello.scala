@@ -1,9 +1,18 @@
 package example
 
+import scalaz.effect.IO
+import scalaz.effect.IO.putStrLn
+
 object Hello extends Greeting with App {
-  println(greeting)
+
+  def greeting: String = "hello"
+
+  val printHello: IO[Unit] = putStrLn(greeting)
+
+  printHello.unsafePerformIO
 }
 
 trait Greeting {
-  lazy val greeting: String = "hello"
+  def greeting: String
 }
+
