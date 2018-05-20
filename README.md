@@ -1,4 +1,4 @@
-# Minimallist Scalaz Hello World App
+# Minimalist Scalaz Hello World App
 
 This assumes you are using OSX, have Java 8 or greater
 installed and have brew installed.
